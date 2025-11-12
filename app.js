@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 
 app.listen(process.env.APP_PORT, (error) => {
   if (error) throw error;
